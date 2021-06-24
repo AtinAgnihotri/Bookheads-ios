@@ -31,11 +31,24 @@ struct PushButton: View {
 }
 
 struct CustomComponents: View {
+    @Environment(\.horizontalSizeClass) var sizeClass
     @State private var rememberMe = false
     var body: some View {
-        VStack {
-            PushButton(title: "Remember me", isOn: $rememberMe)
-            Text(rememberMe ? "On" : "Off")
+//        VStack {
+//            PushButton(title: "Remember me", isOn: $rememberMe)
+//            Text(rememberMe ? "On" : "Off")
+//        }
+        // AnyView help us do type erasure, although there is a performance impact, so it's best to avoid AnyView unless specifically needed
+        if sizeClass == .compact {
+            return AnyView(VStack {
+                Text("Active Size Class:")
+                Text("COMPACT")
+            }.font(.largeTitle))
+        } else {
+            return AnyView(HStack {
+                Text("Active Size Class:")
+                Text("REGULAR")
+            }.font(.largeTitle))
         }
     }
 }
