@@ -13,7 +13,8 @@
 		8524FD4F26839DD2007D5BC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8524FD4E26839DD2007D5BC5 /* Preview Assets.xcassets */; };
 		8524FD5126839DD2007D5BC5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8524FD5026839DD2007D5BC5 /* Persistence.swift */; };
 		8524FD5426839DD2007D5BC5 /* Bookheads.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8524FD5226839DD2007D5BC5 /* Bookheads.xcdatamodeld */; };
-		85D903F52683A9AF004E3BBF /* CustomComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D903F42683A9AF004E3BBF /* CustomComponents.swift */; };
+		85793880268589C400AAC115 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579387F268589C400AAC115 /* AddBookView.swift */; };
+		85DC59BC2684F1AA008C2D57 /* PushButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DC59BB2684F1AA008C2D57 /* PushButtonComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,8 @@
 		8524FD5026839DD2007D5BC5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		8524FD5326839DD2007D5BC5 /* Bookheads.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookheads.xcdatamodel; sourceTree = "<group>"; };
 		8524FD5526839DD2007D5BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85D903F42683A9AF004E3BBF /* CustomComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomComponents.swift; sourceTree = "<group>"; };
+		8579387F268589C400AAC115 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		85DC59BB2684F1AA008C2D57 /* PushButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButtonComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +66,9 @@
 				8524FD5026839DD2007D5BC5 /* Persistence.swift */,
 				8524FD5526839DD2007D5BC5 /* Info.plist */,
 				8524FD5226839DD2007D5BC5 /* Bookheads.xcdatamodeld */,
+				85DC59BB2684F1AA008C2D57 /* PushButtonComponent.swift */,
 				8524FD4D26839DD2007D5BC5 /* Preview Content */,
-				85D903F42683A9AF004E3BBF /* CustomComponents.swift */,
+				8579387F268589C400AAC115 /* AddBookView.swift */,
 			);
 			path = Bookheads;
 			sourceTree = "<group>";
@@ -148,10 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8524FD5126839DD2007D5BC5 /* Persistence.swift in Sources */,
+				85793880268589C400AAC115 /* AddBookView.swift in Sources */,
 				8524FD4A26839DCC007D5BC5 /* ContentView.swift in Sources */,
 				8524FD5426839DD2007D5BC5 /* Bookheads.xcdatamodeld in Sources */,
+				85DC59BC2684F1AA008C2D57 /* PushButtonComponent.swift in Sources */,
 				8524FD4826839DCC007D5BC5 /* BookheadsApp.swift in Sources */,
-				85D903F52683A9AF004E3BBF /* CustomComponents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
