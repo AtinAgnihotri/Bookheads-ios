@@ -9,6 +9,9 @@ import SwiftUI
 import CoreData
 
 struct DetailsView: View {
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.presentationMode) var presentationMode
+    @State private var showingDeleteAlert = false
     let book: Book
     
     var genre: String {
@@ -78,7 +81,33 @@ struct DetailsView: View {
                 .background(Color.primary.opacity(0.7))
                 .clipShape(Rectangle())
             }
-        }.navigationBarTitle(book.title ?? "Unknown Title")
+        }
+        .navigationBarTitle(book.title ?? "Unknown Title")
+        .navigationBarItems(trailing:
+            Button("Delete") {
+                self.showingDeleteAlert.toggle()
+            }
+            .frame(maxWidth: .infinity)
+            .font(.headline)
+            .padding(.horizontal)
+            .padding(3)
+            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color(white: 0.2)]), startPoint: .top, endPoint: .bottom))
+            .clipShape(Capsule())
+            .foregroundColor(.white)
+        )
+        .alert(isPresented: $showingDeleteAlert) {
+            Alert(title: Text("🚨 Confirm"),
+                  message: Text("Are you sure you want to delete this book review?"),
+                  primaryButton: .destructive(Text("Confirm"), action: deleteBook),
+                  secondaryButton: .cancel()
+            )
+        }
+    }
+    
+    func deleteBook() {
+        moc.delete(book)
+        try? moc.save()
+        presentationMode.wrappedValue.dismiss()
     }
 }
 

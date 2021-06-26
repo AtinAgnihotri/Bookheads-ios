@@ -22,7 +22,8 @@ struct ContentView: View {
             VStack {
                 List {
                     ForEach(books, id:\.self) { book in
-                        NavigationLink(destination: DetailsView(book)) {
+                        NavigationLink(destination: DetailsView(book)
+                                        .environment(\.managedObjectContext, moc)) {
                             EmojiRatingView(rating: book.rating)
                             VStack (alignment: .leading){
                                 Text(book.title ?? "Unknown Title")
@@ -44,10 +45,11 @@ struct ContentView: View {
                         .foregroundColor(.primary)
                         .colorInvert()
                         .padding()
-                        .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color(white: 0.2)]), startPoint: .top, endPoint: .bottom))
+                        .background(LinearGradient(gradient: Gradient(colors: [Color.secondary, Color(white: 0.2)]), startPoint: .top, endPoint: .bottom))
                         .frame(alignment:.leading)
                         .scaleEffect(1.5)
                         .clipShape(Circle())
+                        .scaleEffect(0.9)
                 }
             ))
         }
