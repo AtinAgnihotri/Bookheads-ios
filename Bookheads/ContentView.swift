@@ -40,7 +40,14 @@ struct ContentView: View {
                 leading: EditButton(),
                 trailing: Button(action: showAddBookView,
                 label: {
-                    Image(systemName: "plus").scaleEffect(2)
+                    Image(systemName: "plus")
+                        .foregroundColor(.primary)
+                        .colorInvert()
+                        .padding()
+                        .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color(white: 0.2)]), startPoint: .top, endPoint: .bottom))
+                        .frame(alignment:.leading)
+                        .scaleEffect(1.5)
+                        .clipShape(Circle())
                 }
             ))
         }
