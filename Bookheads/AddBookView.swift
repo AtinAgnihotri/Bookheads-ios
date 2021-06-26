@@ -35,29 +35,33 @@ struct AddBookView: View {
                             ForEach(genres, id: \.self) { genre in
                                 Text(genre)
                             }
-                        }.labelsHidden().pickerStyle(WheelPickerStyle())
+                        }
+                        .labelsHidden()
+                        .pickerStyle(WheelPickerStyle())
                     }
                     
                     Section(header: Text("Rating").font(.headline)) {
-                        Picker(selection: $rating, label: Text("Rating for the book")) {
-                            ForEach(1..<6) { stars in
-                                Text("\(stars)")
-                            }
-                        }.labelsHidden().pickerStyle(SegmentedPickerStyle())
+                        StarRatingView(rating: $rating)
+                            .frame(maxWidth: .infinity)
                     }
                     
                     Section(header: Text("Review").font(.headline)) {
                         TextEditor(text: $review)
                     }
+                    
                 }
                 
                 Button("Save") {
                     submitBook()
                 }
+                .frame(maxWidth: .infinity)
+                .font(.title)
                 .padding()
                 .background(LinearGradient(gradient: Gradient(colors: [Color.green, Color(white: 0.2)]), startPoint: .top, endPoint: .bottom))
                 .clipShape(Capsule())
                 .foregroundColor(.white)
+                .padding(.horizontal)
+                
             }.navigationBarTitle("Add Book", displayMode: .inline)
         }
     }

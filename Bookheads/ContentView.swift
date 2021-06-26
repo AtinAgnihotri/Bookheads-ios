@@ -12,11 +12,25 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Book.entity(), sortDescriptors: []) var books: FetchedResults<Book>
     @State var showingAddScreen = false
+    @State var rating = 3
     
     var body: some View {
         NavigationView {
             VStack {
-                Text("Count: \(books.count)")
+                List {
+                    ForEach(books, id:\.self) { book in
+                        NavigationLink(destination: Text(book.title ?? "Unknown Title")) {
+                            EmojiRatingView(rating: book.rating)
+                            VStack (alignment: .leading){
+                                Text(book.title ?? "Unknown Title")
+                                    .font(.headline)
+                                Text(book.author ?? "Unknown Author")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                    }
+                }
             }
             .navigationBarTitle("Bookheads")
             .navigationBarItems(
