@@ -16,6 +16,7 @@
 		85793880268589C400AAC115 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579387F268589C400AAC115 /* AddBookView.swift */; };
 		857938BE26863A4F00AAC115 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857938BD26863A4F00AAC115 /* StarRatingView.swift */; };
 		857938C02686F81800AAC115 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857938BF2686F81800AAC115 /* EmojiRatingView.swift */; };
+		857938C22686FD5100AAC115 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857938C12686FD5100AAC115 /* DetailsView.swift */; };
 		85DC59BC2684F1AA008C2D57 /* PushButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DC59BB2684F1AA008C2D57 /* PushButtonComponent.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		8579387F268589C400AAC115 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		857938BD26863A4F00AAC115 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 		857938BF2686F81800AAC115 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		857938C12686FD5100AAC115 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		85DC59BB2684F1AA008C2D57 /* PushButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButtonComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				8579387F268589C400AAC115 /* AddBookView.swift */,
 				857938BD26863A4F00AAC115 /* StarRatingView.swift */,
 				857938BF2686F81800AAC115 /* EmojiRatingView.swift */,
+				857938C12686FD5100AAC115 /* DetailsView.swift */,
 			);
 			path = Bookheads;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			files = (
 				857938BE26863A4F00AAC115 /* StarRatingView.swift in Sources */,
 				8524FD5126839DD2007D5BC5 /* Persistence.swift in Sources */,
+				857938C22686FD5100AAC115 /* DetailsView.swift in Sources */,
 				85793880268589C400AAC115 /* AddBookView.swift in Sources */,
 				8524FD4A26839DCC007D5BC5 /* ContentView.swift in Sources */,
 				857938C02686F81800AAC115 /* EmojiRatingView.swift in Sources */,

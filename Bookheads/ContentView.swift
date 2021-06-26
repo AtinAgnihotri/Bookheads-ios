@@ -19,7 +19,7 @@ struct ContentView: View {
             VStack {
                 List {
                     ForEach(books, id:\.self) { book in
-                        NavigationLink(destination: Text(book.title ?? "Unknown Title")) {
+                        NavigationLink(destination: DetailsView(book)) {
                             EmojiRatingView(rating: book.rating)
                             VStack (alignment: .leading){
                                 Text(book.title ?? "Unknown Title")

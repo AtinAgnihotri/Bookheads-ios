@@ -10,12 +10,15 @@ import SwiftUI
 struct AddBookView: View {
     @Environment (\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
-    let genres = ["Non-fiction", "Fantasy", "Horror", "Romance", "Crime", "Young Adult", "Children", "Politics", "Sciences", "Philosophy"]
+    let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry",  "Romance", "Thriller"]
     @State private var title = ""
     @State private var author = ""
-    @State private var genre = ""
+    @State private var genre = "Fantasy"
     @State private var review = ""
     @State private var rating = 2
+    @State private var showingAlert = false
+    @State private var alertTitle = ""
+    @State private var alertMsg = ""
     
     
     var body: some View {
@@ -63,10 +66,32 @@ struct AddBookView: View {
                 .padding(.horizontal)
                 
             }.navigationBarTitle("Add Book", displayMode: .inline)
+        }.alert(isPresented: $showingAlert) {
+            Alert(title: Text(alertTitle), message: Text(alertMsg), dismissButton: .default(Text("OK")))
         }
     }
     
+    func showAlert(title: String, message: String) {
+        alertTitle = title
+        alertMsg = message
+        showingAlert = true
+    }
+    
+    func showErrorAlert(_ errorMessage: String) {
+        showAlert(title: "⚠️ Error", message: errorMessage)
+    }
+    
     func submitBook() {
+        guard !title.isEmpty else {
+            showErrorAlert("Title of the book cannot be empty")
+            return
+        }
+        
+        guard !author.isEmpty else {
+            showErrorAlert("Author of the book cannot be empty")
+            return
+        }
+        
         print("Submit book started")
         saveBook()
         clearForm()
