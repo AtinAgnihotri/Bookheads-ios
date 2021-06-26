@@ -32,14 +32,15 @@ struct ContentView: View {
                                     .foregroundColor(.secondary)
                             }
                         }
-                    }
+                    }.onDelete(perform: deleteBooks)
                 }
             }
             .navigationBarTitle("Bookheads")
             .navigationBarItems(
+                leading: EditButton(),
                 trailing: Button(action: showAddBookView,
                 label: {
-                    Image(systemName: "plus")
+                    Image(systemName: "plus").scaleEffect(2)
                 }
             ))
         }
@@ -50,6 +51,15 @@ struct ContentView: View {
     
     func showAddBookView() {
         self.showingAddScreen.toggle()
+    }
+    
+    func deleteBooks(at offsets: IndexSet) {
+        for offset in offsets {
+            let book = books[offset]
+            moc.delete(book)
+        }
+        
+        try? moc.save()
     }
 
 }
