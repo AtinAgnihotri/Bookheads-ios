@@ -105,6 +105,7 @@ struct AddBookView: View {
         book.author = self.author
         book.genre = self.genre
         book.id = UUID()
+        book.date = Date()
         book.review = self.review
         book.rating = Int16(rating)
         try? self.moc.save()

@@ -22,6 +22,12 @@ struct DetailsView: View {
         "\(book.title ?? "Unknown Title") by \(book.author ?? "Unknown Author")"
     }
     
+    var formattedDate: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: book.date ?? Date())
+    }
+    
     init(_ book: Book) {
         self.book = book
     }
@@ -51,6 +57,21 @@ struct DetailsView: View {
                         .colorInvert()
                     Spacer()
                     Text(book.author ?? "Unknown Author")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.primary)
+                        .colorInvert()
+                }
+                .padding()
+                .background(Color.primary.opacity(0.7))
+                HStack (alignment: .center){
+                    Text("Date Added:")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.primary)
+                        .colorInvert()
+                    Spacer()
+                    Text(formattedDate)
                         .font(.title)
                         .bold()
                         .foregroundColor(.primary)

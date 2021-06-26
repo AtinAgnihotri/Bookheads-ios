@@ -21,6 +21,7 @@ struct PersistenceController {
             newBook.id = UUID()
             newBook.review = ""
             newBook.rating = Int16(1)
+            newBook.date = Date()
         }
         do {
             try viewContext.save()

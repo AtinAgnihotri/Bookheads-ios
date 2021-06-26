@@ -15,6 +15,7 @@ struct BookheadsApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
         }
     }
 }
