@@ -11,6 +11,7 @@ struct AddBookView: View {
     @Environment (\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry",  "Romance", "Thriller"]
+    
     @State private var title = ""
     @State private var author = ""
     @State private var genre = "Fantasy"
@@ -66,7 +67,8 @@ struct AddBookView: View {
                 .padding(.horizontal)
                 
             }.navigationBarTitle("Add Book", displayMode: .inline)
-        }.alert(isPresented: $showingAlert) {
+        }
+        .alert(isPresented: $showingAlert) {
             Alert(title: Text(alertTitle), message: Text(alertMsg), dismissButton: .default(Text("OK")))
         }
     }

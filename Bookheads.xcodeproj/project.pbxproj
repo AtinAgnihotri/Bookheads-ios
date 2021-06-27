@@ -14,6 +14,7 @@
 		8524FD5126839DD2007D5BC5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8524FD5026839DD2007D5BC5 /* Persistence.swift */; };
 		8524FD5426839DD2007D5BC5 /* Bookheads.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8524FD5226839DD2007D5BC5 /* Bookheads.xcdatamodeld */; };
 		8566788626879C72007A731B /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566788526879C72007A731B /* UIApplicationExtension.swift */; };
+		856678882687A1DC007A731B /* AdaptsToKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856678872687A1DC007A731B /* AdaptsToKeyboard.swift */; };
 		85793880268589C400AAC115 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579387F268589C400AAC115 /* AddBookView.swift */; };
 		857938BE26863A4F00AAC115 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857938BD26863A4F00AAC115 /* StarRatingView.swift */; };
 		857938C02686F81800AAC115 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857938BF2686F81800AAC115 /* EmojiRatingView.swift */; };
@@ -31,6 +32,7 @@
 		8524FD5326839DD2007D5BC5 /* Bookheads.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookheads.xcdatamodel; sourceTree = "<group>"; };
 		8524FD5526839DD2007D5BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8566788526879C72007A731B /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		856678872687A1DC007A731B /* AdaptsToKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptsToKeyboard.swift; sourceTree = "<group>"; };
 		8579387F268589C400AAC115 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		857938BD26863A4F00AAC115 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 		857938BF2686F81800AAC115 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				857938BF2686F81800AAC115 /* EmojiRatingView.swift */,
 				857938C12686FD5100AAC115 /* DetailsView.swift */,
 				8566788526879C72007A731B /* UIApplicationExtension.swift */,
+				856678872687A1DC007A731B /* AdaptsToKeyboard.swift */,
 			);
 			path = Bookheads;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				8524FD4A26839DCC007D5BC5 /* ContentView.swift in Sources */,
 				857938C02686F81800AAC115 /* EmojiRatingView.swift in Sources */,
 				8524FD5426839DD2007D5BC5 /* Bookheads.xcdatamodeld in Sources */,
+				856678882687A1DC007A731B /* AdaptsToKeyboard.swift in Sources */,
 				85DC59BC2684F1AA008C2D57 /* PushButtonComponent.swift in Sources */,
 				8524FD4826839DCC007D5BC5 /* BookheadsApp.swift in Sources */,
 			);
